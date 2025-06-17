@@ -1,14 +1,14 @@
-# GluApp Server
+# The GluApp
 
 **An advanced, secure, and real-time backend for comprehensive diabetes management.**
 
-GluApp is an advanced diabetes management platform providing real-time glucose monitoring, health tracking, and CGM device integration. This repository contains the source code for the robust, scalable, and secure backend server that powers the GluApp ecosystem.
+The GluApp is an advanced diabetes management platform providing real-time glucose monitoring, health tracking, and CGM device integration. This repository contains the source code for the robust, scalable, and secure backend server that powers the GluApp ecosystem.
 
 ---
 
 ## About The Project
 
-The GluApp server is the central nervous system of our platform, designed to provide a seamless and reliable experience for children, parents, and healthcare providers. It handles everything from real-time data ingestion from CGM devices to complex analytics and notifications, all while ensuring the highest standards of data security and privacy.
+The GluApp is the central nervous system of our platform, designed to provide a seamless and reliable experience for children, parents, and healthcare providers. It handles everything from real-time data ingestion from CGM devices to complex analytics and notifications, all while ensuring the highest standards of data security and privacy.
 
 Our mission is to empower families and individuals managing diabetes by providing powerful, intuitive, and engaging tools. This server is the foundation of that mission.
 
@@ -16,7 +16,7 @@ Our mission is to empower families and individuals managing diabetes by providin
 
 ## Key Features
 
-The GluApp server is built with a focus on performance, reliability, and security. Here are some of the core features that make our platform stand out:
+The GluApp is built with a focus on performance, reliability, and security. Here are some of the core features that make our platform stand out:
 
 ### 🚀 Blazing-Fast Real-Time Data Sync
 * **WebSocket Integration**: Utilizes a high-performance WebSocket server for instantaneous, bidirectional communication between the app and the server.

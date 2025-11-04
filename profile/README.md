@@ -1,62 +1,219 @@
-# The GluApp
+# 🧸 GluApp - Diabetes Management Platform
 
-**An advanced, secure, and real-time backend for comprehensive diabetes management.**
+### *Empowering Type 1 Diabetes families with intelligent, real-time care*
 
-The GluApp is an advanced diabetes management platform providing real-time glucose monitoring, health tracking, and CGM device integration. This repository contains the source code for the robust, scalable, and secure backend server that powers the GluApp ecosystem.
+[![Version](https://img.shields.io/badge/version-0.5.0-blue.svg)](https://github.com/yourusername/gluapp)
+[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web-lightgrey.svg)](https://www.gluapp.com)
+[![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
+[![React Native](https://img.shields.io/badge/react--native-0.79.2-blue.svg)](https://reactnative.dev)
 
----
+[About](#about) • [Features](#features) • [Technology](#technology) • [Security](#security) • [Contact](#contact)
 
-## About The Project
-
-The GluApp is the central nervous system of our platform, designed to provide a seamless and reliable experience for children, parents, and healthcare providers. It handles everything from real-time data ingestion from CGM devices to complex analytics and notifications, all while ensuring the highest standards of data security and privacy.
-
-Our mission is to empower families and individuals managing diabetes by providing powerful, intuitive, and engaging tools. This server is the foundation of that mission.
-
----
-
-## Key Features
-
-The GluApp is built with a focus on performance, reliability, and security. Here are some of the core features that make our platform stand out:
-
-### 🚀 Blazing-Fast Real-Time Data Sync
-* **WebSocket Integration**: Utilizes a high-performance WebSocket server for instantaneous, bidirectional communication between the app and the server.
-* **Live Updates**: Glucose readings, alerts, and notifications are pushed to all connected family members and caregivers in real-time, ensuring everyone is always up-to-date.
-
-### 🌐 Seamless CGM Integration
-* **Multi-Provider Support**: Built-in, secure integrations with leading CGM providers, including **Dexcom (via OAuth2)** and **Abbott FreeStyle Libre (via LibreLinkUp)**.
-* **Unified Data Model**: Consolidates data from various sources (CGM, manual entries, Nightscout) into a single, consistent format for reliable analysis.
-* **Robust Sync Engine**: A dedicated service handles the fetching, transformation, and storage of CGM data, ensuring data integrity.
-
-### 🧠 Intelligent Alerts & Notifications
-* **Complex Alerting Engine**: A sophisticated `AlertService` evaluates incoming data against user-defined thresholds (high, low, rapid change) to generate timely and accurate alerts.
-* **Multi-Channel Notifications**: Integrated with **Expo (Push)**, **Twilio (SMS & Voice)**, and **Mailjet/Nodemailer (Email)** to deliver critical alerts through the user's preferred channels.
-* **Smart and Customizable**: Features include configurable quiet hours, alert snoozing, and an escalation system to notify emergency contacts.
-
-### 📊 Powerful Data Analytics & Predictive Insights
-* **Advanced Glucose Calculations**: Implements industry-standard calculations for metrics like Time-in-Range (TIR), eA1c, Standard Deviation, and Glucose Management Indicator (GMI).
-* **Unified Trend Service**: A proprietary algorithm provides consistent and reliable trend analysis (e.g., `Rising`, `Falling`, `Stable`) across all data sources.
-* **Pattern Recognition**: The `AnalyticsService` identifies recurring patterns like morning spikes or post-meal highs to provide actionable insights.
-
-### 🎮 Engaging Gamification & Education for Children
-* **Complete Gamification Engine**: Features a `GamificationService` and `HeroService` to manage XP, levels, ranks, quests, and achievements.
-* **Interactive Learning**: The `EducationService` delivers structured lessons, activities, and quizzes tailored to different age groups, making diabetes education engaging and fun.
-* **Hero Progression**: Children create and level up their own "hero" character by actively participating in their diabetes management, fostering a sense of accomplishment and ownership.
-
-### 🔒 Secure & Private by Design
-* **Robust Authentication**: Implements JWT-based authentication with access and refresh tokens, including token versioning to invalidate old sessions.
-* **Data Encryption**: All sensitive data, such as third-party CGM provider tokens, is encrypted at rest using **AES-256-GCM**, the industry standard for strong encryption.
-* **Privacy Controls**: A dedicated `PrivacySettings` model and API routes allow users to manage their data sharing and consent preferences.
-* **Parental Controls**: A secure `parentPin` system protects sensitive actions and settings within the app.
+</div>
 
 ---
 
-## Getting Started
+## 🎯 About The Project
 
-This is a private, proprietary codebase. For information on collaboration, partnerships, or investment opportunities, please reach out to our team.
+**GluApp** is a next-generation diabetes management platform specifically designed for **Type 1 Diabetes (T1D) families**. We combine real-time glucose monitoring, intelligent alerts, medication tracking, and engaging educational content to transform how children and their families manage diabetes.
 
-## Contact
+### Our Mission
 
-Project Lead - [hello@myglubear.com](mailto:hello@myglubear.com)
+To empower families managing Type 1 Diabetes by providing **powerful, secure, and child-friendly tools** that make diabetes care safer, easier, and more engaging.
+
+### Why GluApp?
+
+- 🏥 **Medical-Grade Quality**: Built with HIPAA, COPPA, and FDA SaMD considerations
+- 👶 **Child-First Design**: Beautiful, kid-friendly interface with gamification
+- 🔒 **Privacy-Focused**: Enterprise-level security with parent controls
+- 📊 **Clinically Relevant**: Comprehensive analytics for healthcare provider consultations
+- 🌐 **Multi-Platform**: iOS, Android, and Web support
 
 ---
-© 2025 GluBear. All Rights Reserved.
+
+## 🚀 Key Features
+
+### 🩺 Real-Time Glucose Monitoring
+- **Multi-source data aggregation**: Dexcom G6/G7, LibreLink, Nightscout, manual entries
+- **Live WebSocket updates**: Instant synchronization across all family devices
+- **Intelligent trend analysis**: Rising, falling, stable indicators with predictive alerts
+- **Comprehensive statistics**: Time-in-range (TIR), estimated A1C, standard deviation
+
+### 🚨 Intelligent Alert System
+- **Multi-tier severity**: Emergency, Urgent, Warning, Info
+- **Configurable thresholds**: Personalized high/low/rapid-change alerts
+- **Multi-channel delivery**: Push notifications, SMS, email, phone calls
+- **Smart escalation**: Automatic emergency contact notification for critical alerts
+- **Quiet hours**: Nighttime silence with critical-only notifications
+
+### 💉 Advanced Medication Management
+- **Insulin dose calculator**: I:C ratio, ISF/CF, IOB tracking
+- **Multiple delivery methods**: Support for pumps, pens, syringes
+- **Injection site rotation**: Prevents lipohypertrophy
+- **Medication adherence**: Visual tracking and reminders
+
+### 📚 Educational Platform ("Learn Adventures")
+- **Age-appropriate modules**: Glucose Forest (4-6), Hero Academy (7-9), Diabetes Warriors (10-12), Science Squad (13+)
+- **Interactive learning**: Videos, quizzes, activities, reading materials
+- **Progress tracking**: XP, badges, achievements, level progression
+
+### 🎮 Gamification System
+- **Hero characters**: Children create personalized diabetes management heroes
+- **Health-based bonuses**: Real glucose control translates to hero stat improvements
+- **Achievements & quests**: Daily tasks, weekly missions, special events
+- **Mini-games**: Educational games teaching carb counting and diabetes management
+
+### 🧸 GluBear Hardware Integration
+- **Smart companion device**: Bluetooth-connected teddy bear for young children
+- **Multi-modal alerts**: Visual, audio, and haptic glucose notifications
+- **Voice messages**: Parents can send encouraging messages
+- **Scheduled reminders**: Medication and check-in notifications
+
+### 📊 Data Analytics & Reporting
+- **Comprehensive statistics**: TIR, average glucose, GMI, CV, SD
+- **Pattern recognition**: Identifies recurring glucose trends
+- **Professional reports**: PDF/Excel exports for healthcare appointments
+- **AGP reports**: Ambulatory Glucose Profile for clinical review
+
+### 🔐 Privacy & Security
+- **HIPAA compliant**: Protected Health Information encryption
+- **COPPA compliant**: Children's data protection
+- **End-to-end encryption**: AES-256 at rest, TLS 1.3 in transit
+- **Parent PIN protection**: Secure access controls
+- **Granular consent**: User-controlled data sharing preferences
+
+---
+
+## Platform Support
+- ✅ **iOS**: iPhone & iPad (iOS 13.4+)
+- ✅ **Android**: Phones & Tablets (Android 6.0+)
+- ✅ **Web**: Progressive Web App (Chrome, Safari, Firefox, Edge)
+
+---
+
+## 🔒 Security & Compliance
+
+### Data Security
+- **Encryption at Rest**: AES-256-GCM for sensitive data
+- **Encryption in Transit**: TLS 1.3 for all communications
+- **Token Security**: JWT with refresh token rotation
+- **Password Hashing**: Bcrypt with 12 salt rounds
+
+### Regulatory Compliance
+- **✅ HIPAA**: Protected Health Information (PHI) compliance
+- **✅ COPPA**: Children's Online Privacy Protection Act
+- **✅ GDPR Ready**: Data export and deletion capabilities
+- **✅ FDA Considerations**: Software as a Medical Device (SaMD) - Non-diagnostic monitoring tool
+
+### Privacy Controls
+- Parent PIN protection for sensitive operations
+- Granular data sharing preferences
+- Emergency contact management with escalation
+- Complete data export for portability
+- Account deletion with data purging
+
+---
+
+## 📈 Platform Statistics
+
+- **25+ API Route Categories** covering all diabetes management needs
+- **33+ Backend Services** for comprehensive functionality
+- **23+ Data Models** for complete health data tracking
+- **3 Platform Support**: iOS, Android, Web
+- **Multi-language Support**: Ready for internationalization
+
+---
+
+## 🎯 Use Cases
+
+### For Families
+- 👨‍👩‍👧 **Remote Monitoring**: Parents can monitor children at school or activities
+- 🌙 **Nighttime Safety**: Alerts for overnight hypoglycemia
+- 📱 **Multi-caregiver Access**: Grandparents, school nurses, babysitters
+- 📊 **Healthcare Appointments**: Comprehensive reports for doctor visits
+
+### For Children
+- 🎮 **Engaging Education**: Learn about T1D through games and adventures
+- 🦸 **Hero Characters**: Gamified diabetes management
+- 🧸 **GluBear Companion**: Friendly device for young children
+- ⭐ **Achievements**: Rewards for good diabetes management
+
+### For Healthcare Providers
+- 📈 **Clinical Data**: Time-in-range, A1C estimates, pattern analysis
+- 📄 **Professional Reports**: AGP reports and data exports
+- 🔍 **Pattern Recognition**: Identify trends and actionable insights
+- 💊 **Medication Tracking**: Complete insulin dosing history
+
+---
+
+## 🌟 What Makes Us Different
+
+| Feature | GluApp | Traditional Apps |
+|---------|--------|------------------|
+| **Child-Focused Design** | ✅ Beautiful, kid-friendly UI | ❌ Clinical, adult-oriented |
+| **Educational Platform** | ✅ Age-appropriate learning modules | ❌ Limited or no education |
+| **Gamification** | ✅ Hero system, achievements, quests | ❌ Basic badges only |
+| **Multi-source CGM** | ✅ Dexcom, Libre, Nightscout, manual | ⚠️ Single source |
+| **Hardware Integration** | ✅ GluBear smart companion device | ❌ Software only |
+| **Emergency Escalation** | ✅ Automatic emergency contact alerts | ⚠️ Basic notifications |
+| **Insulin Calculator** | ✅ I:C, ISF, IOB tracking | ⚠️ Basic calculation |
+| **Parent Controls** | ✅ PIN protection, privacy settings | ⚠️ Limited controls |
+
+---
+
+## 🏥 Medical Disclaimer
+
+GluApp is a diabetes management tool designed to assist patients and caregivers in tracking and monitoring glucose levels. It is **NOT** intended to:
+- Replace professional medical advice
+- Serve as a diagnostic tool
+- Replace glucose meters or CGM devices
+- Make treatment decisions without healthcare provider consultation
+
+**Always consult with a qualified healthcare provider for medical advice, diagnosis, and treatment decisions.**
+
+---
+
+## 🚀 Getting Started
+
+### Collaboration Opportunities
+
+We are open to:
+- 🤝 **Strategic Partnerships** with diabetes organizations and healthcare providers
+- 💼 **Investment Opportunities** for platform expansion
+- 🔬 **Research Collaborations** with academic institutions
+- 🌍 **International Expansion** with localization partners
+
+---
+
+## 📞 Contact & Support
+
+### Inquiries
+- **Email**: hello@myglubear.com
+- **Website**: [www.gluapp.com](https://www.gluapp.com)
+
+---
+
+## 📄 License
+
+**Proprietary License** - All Rights Reserved
+
+© 2025 GluApp. This software is proprietary and confidential. Unauthorized copying, distribution, modification, or use is strictly prohibited without explicit written permission from GluApp.
+
+For licensing inquiries, contact: hello@myglubear.com
+
+---
+
+## 🌟 Our Vision
+
+We envision a world where children with Type 1 Diabetes can manage their condition confidently, safely, and joyfully. Through innovative technology, engaging education, and compassionate design, we're building tools that don't just track data—they empower lives.
+
+**Join us in transforming diabetes care for the next generation.**
+
+---
+
+### 🧸 GluApp - Because every child deserves to thrive
+
+**Made with ❤️ for T1D families**
+
+[Contact Us](mailto:hello@myglubear.com) • [Partnership Opportunities](mailto:justin@myglubear.com)

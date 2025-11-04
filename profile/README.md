@@ -8,10 +8,6 @@
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![React Native](https://img.shields.io/badge/react--native-0.79.2-blue.svg)](https://reactnative.dev)
 
-[About](#about) • [Features](#features) • [Technology](#technology) • [Security](#security) • [Contact](#contact)
-
-</div>
-
 ---
 
 ## 🎯 About The Project
@@ -190,7 +186,7 @@ We are open to:
 
 ### Inquiries
 - **Email**: hello@myglubear.com
-- **Website**: [www.gluapp.com](https://www.gluapp.com)
+- **Website**: [www.gluapp.com](https://www.myglubear.com)
 
 ---
 

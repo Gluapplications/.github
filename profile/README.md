@@ -4,7 +4,7 @@
 
 [![Version](https://img.shields.io/badge/version-0.5.0-blue.svg)](https://github.com/yourusername/gluapp)
 [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web-lightgrey.svg)](https://www.gluapp.com)
+[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web-lightgrey.svg)](https://www.myglubear.com)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![React Native](https://img.shields.io/badge/react--native-0.79.2-blue.svg)](https://reactnative.dev)
 
@@ -186,7 +186,7 @@ We are open to:
 
 ### Inquiries
 - **Email**: hello@myglubear.com
-- **Website**: [www.gluapp.com](https://www.myglubear.com)
+- **Website**: [www.myglubear.com](https://www.myglubear.com)
 
 ---
 
